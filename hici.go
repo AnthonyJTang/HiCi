@@ -24,19 +24,18 @@ func ReadConfig() Data {
 	if err != nil {
 		log.Fatal("Error during Unmarshal(): ", err)
 	}
-
 	return payload
 }
 
 func main() {
 
-	// fmt.Println(os.Args)
-	githubActor := os.Args[1]
-
 	payload := ReadConfig()
-	configedActor := payload.User + "/" + payload.Repo
-	if githubActor == configedActor {
-		fmt.Printf("!...HiCI it's %s from repo %s...!", payload.User, payload.Repo)
+
+	if len(os.Args[0:]) >= 3 {
+		payload.User = os.Args[1]
+		payload.Repo = os.Args[2]
 	}
 
+	fmt.Printf("!...Hello Continuous Integration, it's %s from %s...!", payload.User, payload.Repo)
+	return
 }
