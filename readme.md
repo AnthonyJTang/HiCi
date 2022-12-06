@@ -11,11 +11,11 @@
 
   [5] Pipe output to a file and upload the file as an artifact
 
-  [7] Add command line arguments using environment variables to the run step to change the output artifact
+  [6] Add command line arguments using environment variables to the run step to change the output artifact
 
-  [6] Add a linter stage, run actions
+  [7] Add a linter stage, run actions
 
-  [7] Fix lint, watch clean lint                                          
+  [8] Fix lint, watch clean lint                                          
 
 
 ## Documentation Links:
